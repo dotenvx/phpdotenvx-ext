@@ -1,13 +1,28 @@
-# phpdotenvx-ext
+[![dotenvx](https://dotenvx.com/banner.png?v2)](https://dotenvx.com)
 
-This repository distributes the native `dotenvx_php` extension for Dotenvx.
+*A secure dotenv*–from the creator of [`dotenv`](https://github.com/motdotla/dotenv).
 
-Install [PIE](https://php.github.io/pie/#installing-pie), then run the following
-from your PHP project.
+* Encrypt
+* Commit
+* Ship
+
+[Install](https://dotenvx.com/docs/install) · [Quickstart](https://dotenvx.com/docs/quickstart)
+
+## Quickstart
+
+Install [PIE](https://php.github.io/pie/#installing-pie) first.
 
 ```sh
 pie install dotenvx/phpdotenvx-ext
 composer require dotenvx/phpdotenvx
 ```
 
-See the [phpdotenvx README](https://github.com/dotenvx/phpdotenvx#quickstart) for usage.
+```php
+<?php
+
+require __DIR__ . '/vendor/autoload.php';
+
+Dotenvx\Dotenvx::createImmutable(__DIR__)->safeLoad();
+
+echo 'Hello ' . getenv('HELLO') . PHP_EOL;
+```
