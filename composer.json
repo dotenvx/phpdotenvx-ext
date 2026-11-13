@@ -1,0 +1,16 @@
+{
+  "name": "dotenvx/phpdotenvx-ext",
+  "description": "Native PHP extension for Dotenvx",
+  "type": "php-ext",
+  "license": "BSD-3-Clause",
+  "homepage": "https://dotenvx.com",
+  "require": {
+    "php": ">=8.1 <8.6"
+  },
+  "php-ext": {
+    "extension-name": "dotenvx_php",
+    "support-zts": false,
+    "os-families": ["darwin", "linux"],
+    "download-url-method": ["pre-packaged-binary"]
+  }
+}
